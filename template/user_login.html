@@ -1,0 +1,15 @@
+{% extends 'base_auth.html' %}
+{% block container %}
+<div class="container col-md-6">
+<h2>Login Now</h2>
+    {% if errMsg %}
+        <p class="text-danger">{{ errMsg }}</p>
+    {% endif %}
+
+<form action="" method="POST" class="">
+    {% csrf_token %}
+    {{ forms.as_p }}
+    <input type="submit" value="submit" class="btn-btn-success" />
+</form>
+    </div>
+{% endblock %}
